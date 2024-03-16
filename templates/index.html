@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <style>
+
+        body{
+            background-color: yellow;
+        }
+
+        #container{
+            text-align: center;
+            margin-top: 14%;
+            background-color: cyan;
+            width: fit-content;
+            margin-left: 22%;
+            padding: 5%;
+            font-size: 3em;
+            border-top-left-radius: 22px;
+            border-bottom-right-radius: 22px;
+            box-shadow: 5px 10px #888888;
+        }
+
+        input{
+            font-size: 0.75em;
+        }
+
+        input[type=submit]{
+            border: none;
+            color: white;
+            background-color: #0d6efd;
+            cursor: pointer;
+            border-radius: 22px;
+            padding: 1%;
+            transition: all 0.3s ease;
+        }
+
+        input[type=submit]:hover{
+            outline: 5px #8888886e solid;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="/" method="post">
+            <label>Enter URL: </label>
+            <input type="url" name="url" placeholder="https://www.example.com">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

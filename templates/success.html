@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <style>
+
+        body{
+            background-color: yellow;
+        }
+
+        #container{
+            text-align: center;
+            margin-top: 14%;
+            background-color: cyan;
+            width: fit-content;
+            margin-left: 22%;
+            padding: 5%;
+            font-size: 1.5em;
+            border-top-left-radius: 22px;
+            border-bottom-right-radius: 22px;
+            box-shadow: 5px 10px #888888;
+        }
+
+        .link{
+            display: flex;
+        }
+
+        button{
+            border: none;
+            color: white;
+            background-color: #0d6efd;
+            cursor: pointer;
+            border-radius: 22px;
+            padding: 1%;
+            transition: all 0.3s ease;
+            height: 50px;
+            width: 75px;
+            font-size: 1em;
+            margin-top: 5%;
+            margin-left: 5%;
+        }
+
+        button:hover{
+            outline: 5px #8888886e solid;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="link">
+            <h1>http://127.0.0.1:5000/{{ short }}</h1>
+            <button type="button">Copy</button>
+        </div>
+        <a href="/">Generate another</a>
+    </div>
+
+    <input type="hidden" value="http://127.0.0.1:5000/{{ short }}" id="url">
+
+    <script>
+        document.querySelector("button").onclick = () => {
+            let text = document.querySelector("#url").value;
+            navigator.clipboard.writeText(text);
+        }
+    </script>
+
+</body>
+</html>
